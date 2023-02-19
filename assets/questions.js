@@ -1,34 +1,62 @@
 const inquirer = require('inquirer');
+const fs = require('fs')
 
 inquirer
     .prompt([
-        /* Pass your questions in here */
+        // Title 
         {
             type: 'input',
-            message: 'What is your user name?',
-            name: 'username',
+            message: 'Write title for README',
+            name: 'title',
         },
+        // Description
         {
             type: 'input',
-            message: 'Whats your email address?',
-            name: 'email'
+            message: 'How would you describe your project?',
+            name: 'description'
         },
+        // Usage
         {
-            type: 'password',
-            message: 'What is your password?',
-            name: 'password',
+            type: 'input',
+            message: 'How would a developer be able to use the project?',
+            name: 'usage',
         },
+        // License
         {
-            type: 'password',
-            message: 'Re-enter password to confirm:',
-            name: 'confirm',
+            type: 'list',
+            message: 'Please chooce license from list',
+            default: 'Mit License',
+            choices: ['Mit License', 'Apache license 2.0', 'Boost Software License 1.0', 'Microsoft Public License', 'Mozilla Public License 2.0'],
+            name: 'license',
+        },
+        // Contributors
+        {
+            type: 'input',
+            message: 'Please add any contributors',
+            name: 'Collaboration',
+        },
+        // Test
+        {
+            type: 'input',
+            message: 'How would I test your application?',
+            name: 'Test',
+        },
+        // Github
+        {
+            type: 'input',
+            message: 'Please enter your Github name along with a url',
+            name: 'Github',
+        },
+        // Email address
+        {
+            type: 'email',
+            message: 'Please enter your email?',
+            name: 'email-address',
         },
     ])
     .then((answers) => {
-        // Use user feedback for... whatever!!
-        response.confirm === response.password
-            ? console.log('Success!')
-            : console.log('You forgot your password already?!')
+        // To check if console log works
+        console.log(answers.title)
     })
     .catch((error) => {
         if (error.isTtyError) {
@@ -37,3 +65,13 @@ inquirer
             // Something else went wrong
         }
     });
+    
+
+/* Description
+Table of Contents
+Installation
+Usage
+License
+Contributing
+Tests
+Questions */
