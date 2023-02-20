@@ -1,5 +1,8 @@
 const inquirer = require('inquirer');
+const generatreadme = require('./generate.js')
 const fs = require('fs')
+
+
 
 inquirer
     .prompt([
@@ -51,26 +54,49 @@ inquirer
         {
             type: 'email',
             message: 'Please enter your email?',
-            name: 'email-address',
+            name: 'email',
         },
     ])
-    .then((answers) => {
+    .then((response) => {
         // To check if console log works
-        fs.writeFile('README File', generatreadme(), err ? console.error(err) : console.log('Successfully generated fs file'))
-        fs.readFile('README-answers', 'utf-8', answers => err ? console.error(err) : console.log(answers))
-        console.log(answers.title)
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
-            console.err(err)
-            // Prompt couldn't be rendered in the current environment
-        } else {
-            // Something else went wrong
-        }
-    });
-    
 
-    module.exports = inquirer
+        fs.writeFile('README File', `
+        # ${response.title}
+        
+        ## Description
+        ${response.description}
+        
+        ## Table of contents
+        
+        ## Usage
+        ${response.usage}
+        
+        ## License
+        Copyright (c) 
+        The license is ${response.license}
+        
+        ## Contributors
+        ${response.Collaboration}
+        
+        ## Tests
+        ${response.Test}
+        
+        ## Questions
+        ${response.Github}
+        
+        ## Email 
+        Contact me at with any additional questions: ${response.email}
+        
+        
+        `, (err) => err ? console.error(err) : console.log('Your data has been saved')
+        )
+        // fs.readFile('README-answers', 'utf-8', (err, data) => err ? console.error(err) : console.log(data))
+        // console.log(response.title)
+    })
+
+
+
+module.exports = inquirer
 
 /* Description
 Table of Contents
