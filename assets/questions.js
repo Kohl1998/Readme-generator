@@ -33,19 +33,19 @@ inquirer
         {
             type: 'input',
             message: 'Please add any contributors',
-            name: 'Collaboration',
+            name: 'credits',
         },
         // Test
         {
             type: 'input',
             message: 'How would I test your application?',
-            name: 'Test',
+            name: 'test',
         },
         // Github
         {
             type: 'input',
             message: 'Please enter your Github name along with a url',
-            name: 'Github',
+            name: 'github',
         },
         // Email address
         {
@@ -62,8 +62,15 @@ inquirer
         
         ## Description
         ${response.description}
+
+        ##table of contenet
         
-        ## Table of contents
+        *[Description](#description)
+        *[Usage](#usage)
+        *[License](#license)
+        *[Credit](#Credits)
+        *[Tests](#test)
+        *[Github](#github)
         
         ## Usage
         ${response.usage}
@@ -72,14 +79,14 @@ inquirer
         Copyright (c) 
         The license is ${response.license}
         
-        ## Contributors
-        ${response.Collaboration}
+        ## Credit
+        ${response.credits}
         
         ## Tests
-        ${response.Test}
+        ${response.test}
         
-        ## Questions
-        ${response.Github}
+        ## Github
+        ${response.github}
         
         ## Email 
         Contact me at with any additional questions: ${response.email}
