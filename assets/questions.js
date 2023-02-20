@@ -56,16 +56,21 @@ inquirer
     ])
     .then((answers) => {
         // To check if console log works
+        fs.writeFile('README File', generatreadme(), err ? console.error(err) : console.log('Successfully generated fs file'))
+        fs.readFile('README-answers', 'utf-8', answers => err ? console.error(err) : console.log(answers))
         console.log(answers.title)
     })
     .catch((error) => {
         if (error.isTtyError) {
+            console.err(err)
             // Prompt couldn't be rendered in the current environment
         } else {
             // Something else went wrong
         }
     });
     
+
+    module.exports = inquirer
 
 /* Description
 Table of Contents
