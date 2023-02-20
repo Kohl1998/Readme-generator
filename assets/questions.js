@@ -1,8 +1,5 @@
 const inquirer = require('inquirer');
-const generatreadme = require('./generate.js')
 const fs = require('fs')
-
-
 
 inquirer
     .prompt([
