@@ -1,6 +1,37 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
+// Random licenses selected
+const Licenses = [{
+    name: 'Mit License',
+    badgeURL: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
+},
+{
+    name: 'Apache license 2.0',
+    badgeURL: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]'
+},
+{
+    name: 'Boost Software License 1.0',
+    badgeURL: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]'
+},
+{
+    name: 'Monzilla Public License 2.0',
+    badgeURL: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]'
+},
+{
+    name: 'The Perl License',
+    badgeURL: '[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]'
+},
+{
+    name: 'IBM Public License Version 1.0',
+    badgeURL: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]'
+},
+{
+    name: 'Eclipse Public License 1.0',
+    badgeURL: '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]'
+}
+]
+
 inquirer
     .prompt([
         // Title 
@@ -25,8 +56,7 @@ inquirer
         {
             type: 'list',
             message: 'Please chooce license from list',
-            default: 'Mit License',
-            choices: ['Mit License', 'Apache license 2.0', 'Boost Software License 1.0', 'Microsoft Public License', 'Mozilla Public License 2.0'],
+            choices: Licenses,
             name: 'license',
         },
         // Contributors
@@ -62,7 +92,7 @@ inquirer
         
         ## Description
         ${response.description}
-
+        
         ##table of contenet
         
         *[Description](#description)
@@ -92,7 +122,7 @@ inquirer
         Contact me at with any additional questions: ${response.email}
         
         
-        `, (err) => err ? console.error(err) : console.log('Your data has been saved')
+        `, (err) => err ? console.error(err) : console.log('Your data has been saved!')
         )
         // fs.readFile('README-answers', 'utf-8', (err, data) => err ? console.error(err) : console.log(data))
         // console.log(response.title)
