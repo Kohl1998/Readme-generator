@@ -24,8 +24,8 @@ Finally, I setup a remote repo on Github to work from, which I then cloned to my
 ## Credits
 
 I used 'Slack' for support - https://slack.com/intl/en-gb
-I used Monzilla for support - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-I used GeekForGeeks for support - https://www.geeksforgeeks.org/how-to-convert-nan-to-0-using-javascript/
+I used 'NPMJs' for support - https://www.npmjs.com/package/inquirer
+I used 'Post Images' for support - https://postimages.org/
 
 ## License
 
