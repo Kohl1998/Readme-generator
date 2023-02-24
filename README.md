@@ -41,6 +41,6 @@ See link below ↓
 
 [![Terminal.jpg](https://i.postimg.cc/TwSY9sHp/Terminal.jpg)](https://postimg.cc/ftcNW8sN)
 
-## Link
+## video
 
-
+https://user-images.githubusercontent.com/117359873/221190811-55adb8f1-151a-455d-bdc1-0c0558b5160c.mp4
