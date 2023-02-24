@@ -1,29 +1,45 @@
 
-        # CLI application
         
-        ## Description
-        A nodejs application to help developers generate a README using the command line
+        ## Badge
+        ### [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)] 
         
-        ## Table of contents
+        # README generator 
         
-        ## Usage
-        By Git cloning the repo via my GIthub
+        ### Description
+        This is a command line application that helps developers generate simple README's
         
-        ## License
+        ### table of contents
+        
+        *[Description](#description)
+        *[Usage](#usage)
+        *[License](#license)
+        *[Credit](#Credits)
+        *[Tests](#test)
+        *[Github](#github)
+        
+        ### Usage
+        By git cloning my repo from my Github @kohl1998
+        
+        ### License
         Copyright (c) 
-        The license is Mit License
+        The license is Monzilla Public License 2.0
         
-        ## Contributors
-        Quinton
+        ### Credit
+        Thanks to Quinton Pedrick for being a part of this project!
         
-        ## Tests
-        By running the application on the terminal and answering all prompts
+        ### Tests
+        By running application within your terminal and answering all prompts
+
+        ## Questions 
+        Github name: kohl1998
+        Email Address: kohlvernon@google.com
         
-        ## Questions
-        kohl1998 - https://github.io/kohl1998
+        ### Github
+        Github username: kohl1998
         
         ## Email 
-        Contact me at with any additional questions: kohlvernon@gmail.com
+        Contact me at with any additional questions @kohlvernon@google.com or 
+check out my Github profile @https://github.com/kohl1998
         
         
         
