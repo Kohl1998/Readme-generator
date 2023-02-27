@@ -29,7 +29,7 @@ I used 'Post Images' for support - https://postimages.org/
 
 ## License
 
-MIT license
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Features
 
